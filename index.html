@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu Gi Oh </title>
+    <!-- stilos da pagina-->
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="./src/styles/containers_and_frames.css">
+    <link rel="stylesheet" href="./src/styles/buttons.css">
+
+    <!-- fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <main>
+        <div class="bg-video">
+            <video class="video" autoplay loop muted>
+                <source src="./src/assets/video/yugi.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="container">
+
+            <div class="conatiner-esquerda framed-golden-2">
+
+                <div class="pontos borda background-1">
+                    <span id="saldo-ponto">
+                        win:0 | losse:0
+                    </span>
+                </div>
+                <div class="avatar borda ">
+                    <img >
+                </div>
+                <div class="detales-carta borda background-1">
+                    <p id="carta-nome">Carregando</p>
+                    <p id="carta-tipo">Carregando</p>
+                </div>
+
+            </div>
+            <div class=" container-direita">
+
+                <div class="container-caixa-principal ">
+
+                    <div class="carta-jogador framed" id="jogador-1">
+
+                    </div>
+                    <div class="cartas-comparadas">
+
+                        <div class="carta-selecionada framed">
+                            <img id="carta-jogador">
+                        </div>
+
+                        <div class="icone-versus">
+                            <div class="icone-versus-image"></div>
+                        </div>
+
+                        <div class="carta-selecionada framed">
+                            <img id="carta-inimigo">
+                        </div>
+
+
+                    </div>
+
+                    <div class="botao-versus">
+                            <button id="proximo-duelo" class="rpgui-button" onclick="resetDuel()">Ganhou</button>
+                        </div>
+                    <div class="carta-jogador framed" id="jogador-2">
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+
+
+    <script src="./src/scripts/engine.js" defer></script>
+</body>
+
+</html>

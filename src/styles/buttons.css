@@ -5,6 +5,7 @@
 /* button style */
 .rpgui-button {
   /* hide button default stuff */
+  cursor: pointer;
   background-color: Transparent;
   background-repeat: no-repeat;
   border: none;
