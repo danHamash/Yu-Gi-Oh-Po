@@ -58,17 +58,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 300px;
+    max-width: 320px;
     height: 3.5rem;
     padding: .8rem;
 }
-
-.avatar {
-    width: auto;
-    height: auto;
+#carta-tipo::first-letter{
+text-transform: uppercase;    
+}
+.detales-carta{
+    padding: .8rem .5rem;
 }
 .avatar img{
-    
+    height: 400px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -79,13 +80,24 @@
     justify-content: space-between;
     height: 90px;
 }
+.carta{
+    transition:0.3s;
+}
+.carta:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
 
 #carta-nome {
-    font-size: .7rem;
+    font-size: 1.2rem;
 }
 
 #carta-tipo {
     font-size: 1rem;
+}
+#cartaInimigo, #cartaJogador{
+    height: 210px;
+    padding: .2rem;
 }
 
 
@@ -145,3 +157,4 @@
 #proximo-duelo{
     display: none;
 }
+
