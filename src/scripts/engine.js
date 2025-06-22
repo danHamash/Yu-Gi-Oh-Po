@@ -162,10 +162,12 @@ async function checarResultadoDuelo(jogador1CartaId, jogador2CartaId) {
 
     if (cartaJogador.ganhaDe.includes(jogador2CartaId)) {
         resultadoDuelos = "Ganhou";
+        await playMusica("win");
         state.pontuacao.pontosJogador++;
     } 
     if (cartaJogador.perdeDe.includes(jogador2CartaId)) {
         resultadoDuelos = "Perdeu";
+        await playMusica("lose");
         state.pontuacao.pontosComputador++;
     }
 
@@ -218,12 +220,20 @@ state.acao.botao.style.display="none";
 state.fotoCartas.nomeCarta.innerHTML = "Carregando";
 state.fotoCartas.tipoCarta.innerHTML= "Carregando";
 
+state.cartaSelecionada.cartaJogador.style.display ="none";
+state.cartaSelecionada.cartaComputador.style.display ="none";
+
 
 
 main()
 }
 
+async function playMusica(status){
+const audio = new Audio(`./src/assets/audios/${status}.wav`);
+audio.play();
+audio.volume = 0.2;
 
+}
 
 function main(){
 comprarCartas(5, ladoJogadores.jogador1);
